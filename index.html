@@ -1,0 +1,145 @@
+<!-- 
+	rotate360 v0.1
+	by Rickyh.co.uk & Oliveta
+	powered by Mootools
+-->	
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.3.2/mootools-yui-compressed.js" type="text/javascript"></script>
+<script src="script/mootools-more-1.3.2.1.js" type="text/javascript"></script>
+<script src="script/rotate360.js" type="text/javascript"></script>	
+<script type="text/javascript">
+window.addEvent('domready',function()
+{
+/*
+   class Rotate360
+   use: 
+      Rotate360() - applied to class^=imgholder elements, {tickAmount:10, firstFrame:0, autoPlay:false}
+	  Rotate360(array of ids, options) - options: 
+	                                     (string) class_el, - if ids missing applied to class=class_el elements
+										 (int) tickAmount, - how much do u have to drag for a move
+										 (int) firstFrame, - this is clear, init?
+										 (bool) autoPlay, - dtto 
+*/   
+new Rotate360(['watch1'],{tickAmount:15});
+new Rotate360(['watch2'], {firstFrame:1});
+new Rotate360(['watch3'],{tickAmount:8,firstFrame:3});
+new Rotate360(['watch4'],{autoPlay:true,speed:8});
+});
+</script>
+<style type="text/css">
+ 	
+ 	body{
+ 		background: #fff;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#ffffff;
+ 	}
+	
+	a {
+	text-decoration:none;
+	color:#999999;
+	}
+	
+	a:hover {
+	color:#999999;
+	font-weight:bold;
+	}
+	
+	#document {
+		margin: 50px auto 0px auto;
+		width:830px;
+		height:250px;
+		background-color:#000000;
+		position:relative;
+		
+	}
+ 	
+ 	.watches {
+			width: 200px;
+			height: 150px;
+			top:50px;
+			position: absolute;
+    }
+	
+    #watch1{
+		    left:0px;
+			background-image:url(images/watches/watches_5.jpg);
+			
+	}
+	#watch2{
+			
+			left:210px;
+			background-image:url(images/watches/watches_9.jpg);
+			
+	}
+	
+	#watch3{
+			
+			left:420px;
+			background-image:url(images/watches/watches_17.jpg);
+			
+	}
+	
+	#watch4{
+			
+			left:630px;
+			background-image:url(images/watches/watches_41.jpg);
+			
+	}
+	
+
+	#footer {
+	margin: 0px auto 0px auto;
+	width:830px;
+	padding:10px 0px;
+	background-color:#ffffff;
+	text-align:right;
+	color:#e8e8e8;
+	
+	}
+	
+	#footer div {
+	margin:0px 0px;
+	font-variant:small-caps;
+	}
+		
+/* style for mootools Spinner class */	
+	.spinner {
+	position: absolute;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	z-index: 999;
+	background: #fff;
+	}
+	.spinner-msg {
+	text-align: center;
+	font-weight: bold;
+	}
+
+	.spinner-img {
+	background: url(images/spinner.gif) no-repeat;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	}
+		
+</style>
+</head>
+<body>
+<div id="document">
+<div id="watch1" title="" class="watches"></div>
+<div id="watch2" title="" class="watches"></div>
+<div id="watch3" title="" class="watches"></div>
+<div id="watch4" title="" class="watches"></div>
+</div>	
+<div id="footer">
+<div>rotate360 exmaple :: <a href="mailto:oliveta@gmail.com"> oliveta</a> :: 2010</div>					
+</div>			
+</body>
+</html>
+
+
+
